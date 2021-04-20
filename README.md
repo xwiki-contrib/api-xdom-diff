@@ -1,6 +1,17 @@
 # XDOM Diff API
 
-Provides an API to compute and render the changes between two [XDOM trees](https://rendering.xwiki.org). The high-level algorithm implemented is this:
+Provides an API to compute and render the changes between two [XDOM trees](https://rendering.xwiki.org).
+
+* Project Lead: [Marius Dumitru Florea](https://www.xwiki.org/xwiki/bin/view/XWiki/mflorea) 
+* Communication: [Forum](https://forum.xwiki.org/), [Chat](https://dev.xwiki.org/xwiki/bin/view/Community/Chat)
+* [Development Practices](http://dev.xwiki.org/) 
+* Minimal XWiki version supported: XWiki **12.10**
+* License: LGPL 2.1
+* Translations: N/A 
+* Sonar Dashboard: [![Status](https://sonarcloud.io/api/project_badges/measure?project=org.xwiki.contrib:api-xdom-diff&metric=alert_status)](https://sonarcloud.io/dashboard?id=org.xwiki.contrib:api-xdom-diff)
+* Continuous Integration Status: [![Build Status](http://ci.xwiki.org/view/Contrib/job/XWiki%20Contrib/job/api-xdom-diff/job/main/badge/icon)](http://ci.xwiki.org/view/Contrib/job/XWiki%20Contrib/job/api-xdom-diff/job/main/)
+
+The high-level algorithm implemented is this:
 
 1. the input XDOM trees are _serialized_ as two **lists** of blocks; it's important that the serialization function is reversible, meaning that we need to be able to recompute the XDOM trees from the two lists of blocks; for this we introduce an ``EndBlock`` to mark where the descendants of a block end in the list of Blocks; you can view this ``EndBlock`` like a closing tag in a markup language such as HTML.
 2. we compute the changes between the two lists of blocks using a standard diff algorithm (such as the Myers diff algorithm); this produces a patch
