@@ -33,6 +33,9 @@
   <name>XDOM Diff API</name>
   <version>1.0-SNAPSHOT</version>
   <description>API to compute and render the changes between two XDOM trees.</description>
+  <properties>
+    <xwiki.jacoco.instructionRatio>0.78</xwiki.jacoco.instructionRatio>
+  </properties>
   <developers>
     <developer>
       <id>mflorea</id>
