@@ -1,0 +1,3 @@
+org.xwiki.contrib.rendering.internal.block.diff.DefaultBlockDiffManager
+org.xwiki.contrib.rendering.internal.block.diff.DefaultBlockDiffMarker
+org.xwiki.contrib.rendering.internal.block.diff.FormatWrapperFilter

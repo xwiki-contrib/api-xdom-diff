@@ -1,0 +1,12 @@
+##--------------------
+## left
+##--------------------
+one two three
+##--------------------
+## right
+##--------------------
+one three
+##--------------------
+## expected-marker
+##--------------------
+<p>one <span data-xdom-diff="deleted">two&nbsp;</span>three</p>
